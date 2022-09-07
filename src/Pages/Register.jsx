@@ -4,7 +4,7 @@ import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth, storage, db } from "../Firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore"; 
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Register = () => {
   const [err, setErr] = useState(false);
@@ -33,7 +33,7 @@ const Register = () => {
             async (downloadURL) => {
               await updateProfile(res.user, {
                 displayName,
-                photoUrl: downloadURL,
+                photoURL: downloadURL,
               });
               await setDoc(doc(db, "users", res.user.uid), {
                 uid: res.user.uid,
@@ -72,7 +72,7 @@ const Register = () => {
           {err && (
             <span style={{ color: "red" }}>! Something went wrong...</span>
           )}
-          <p>Already have an account ?, Login</p>
+          <p>Already have an account ?, <Link to = '/login'>Login</Link></p>
         </div>
       </div>
     </>
