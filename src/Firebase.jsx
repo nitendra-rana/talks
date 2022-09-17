@@ -1,20 +1,15 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getStorage, ref } from "firebase/storage";
-import {getFirestore} from "firebase/firestore"
-
-
-
+import { getStorage } from "firebase/storage";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBqCESkLVHBZ8WNCx7Syw82nACdkvAvLuU",
-  authDomain: "talks-87735.firebaseapp.com",
-  projectId: "talks-87735",
-  storageBucket: "talks-87735.appspot.com",
-  messagingSenderId: "395985582986",
-  appId: "1:395985582986:web:238ef0fa7437a595fb6673",
-  measurementId: "G-NKS3WNVFGV"
+  apiKey: "AIzaSyA7zp2rl_hCv-sSDF4SPn1vzaLjoFHgHBc",
+  authDomain: "talks-2819d.firebaseapp.com",
+  projectId: "talks-2819d",
+  storageBucket: "talks-2819d.appspot.com",
+  messagingSenderId: "325934987198",
+  appId: "1:325934987198:web:912bbfb93c6017a7bd2bef",
 };
 
 // Initialize Firebase
